@@ -76,9 +76,10 @@ const config = {
           //   position: 'left',
           //   label: 'Tutorial',
           // },
-          {to: '/', label: '广场', position: 'left'},
+          {to: '/', label: '广场', position: 'left', activeBaseRegex: '^/$'},
           {to: '/doing', label: '配色生成', position: 'left'},
-          {to: '/doing', label: '色彩检测', position: 'left'},
+          {to: '/test', label: '色彩检测', position: 'left'},
+
           {
             href: 'https://github.com/YuzeTT/color-dot',
             label: 'GitHub',

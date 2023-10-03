@@ -10,9 +10,9 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero rounded-2xl p-10 md:p-14 text-center bg-zinc-100 mx-4 md:mx-10', styles.heroBanner)}>
+    <header className={clsx('hero rounded-2xl p-10 md:p-14 text-center bg-zinc-100 dark:bg-zinc-800 mx-4 md:mx-10', styles.heroBanner)}>
       <div className="container">
-        <h1 className="text-5xl font-bold">{siteConfig.title}</h1>
+        <h1 className="text-4xl md:text-5xl font-bold">{siteConfig.title}</h1>
         <p className="text-lg mt-4">{siteConfig.tagline}</p>
         <div className="flex items-center justify-center space-x-4 mt-6">
           <Link
@@ -39,7 +39,8 @@ export default function Home(): JSX.Element {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        {/* <HomepageFeatures /> */}
+        
       </main>
     </Layout>
   );
