@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Color.',
-  tagline: 'Dinosaurs are cool',
+  title: 'Color Dot',
+  tagline: '生活从不缺乏色彩',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -84,6 +84,10 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
         ],
       },
       footer: {
@@ -141,6 +145,19 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+    plugins: [
+      async function tailwindCSS() {
+        return {
+          name: "docusaurus-tailwindcss",
+          configurePostCss(postcssOptions) {
+            // Appends TailwindCSS and AutoPrefixer.
+            postcssOptions.plugins.push(require("tailwindcss"));
+            postcssOptions.plugins.push(require("autoprefixer"));
+            return postcssOptions;
+          },
+        };
+      },
+    ],
 };
 
 module.exports = config;
