@@ -144,6 +144,9 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      // algolia: {
+      //   contextualSearch: false,
+      // }
     }),
     plugins: [
       async function tailwindCSS() {

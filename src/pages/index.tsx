@@ -10,19 +10,19 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero rounded-2xl', styles.heroBanner, styles.hero)}>
+    <header className={clsx('hero rounded-2xl p-10 md:p-14 text-center bg-zinc-100 mx-4 md:mx-10', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
+        <h1 className="text-5xl font-bold">{siteConfig.title}</h1>
+        <p className="text-lg mt-4">{siteConfig.tagline}</p>
+        <div className="flex items-center justify-center space-x-4 mt-6">
           <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
+            className="button bg-blue-500 button--lg"
+            to="/doing">
             配色生成
           </Link>
           <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
+            className="button bg-blue-500 button--lg"
+            to="/doing">
             色彩检测
           </Link>
         </div>
