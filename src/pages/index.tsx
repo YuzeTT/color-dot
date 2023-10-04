@@ -42,7 +42,8 @@ export default function Home(): JSX.Element {
           {color_list.map((item, key)=>(
             key==0? '':
             <div key={key}>
-              <div className='bg-zinc-100 dark:bg-zinc-800 hover:bg-blue-500 hover:text-white rounded-lg overflow-hidden p-1 shadow-sm group transition' onClick={()=>{window.open('/colors?n='+key,'_blank')}}>
+              {/* <div className='hover:bg-zinc-100 rounded-lg overflow-hidden p-1 hover:shadow-sm cursor-pointer group transition' onClick={()=>{window.open('/colors?n='+key,'_blank')}}> */}
+              <div className='bg-zinc-100 dark:bg-zinc-800 hover:bg-blue-500 hover:text-white rounded-lg overflow-hidden p-1 shadow-sm cursor-pointer group transition' onClick={()=>{window.open('/colors?n='+key, '_self')}}>
                 <div className='rounded-md overflow-hidden shadow-lg'>
                   <div className='flex h-20'>
                     {item.colors.map((item, key)=>(
