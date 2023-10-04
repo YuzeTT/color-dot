@@ -49,36 +49,28 @@ export default function Home(): JSX.Element {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main className='mx-4 md:mx-10 mt-4 md:mt-10'>
-        <div className='grid grid-cols-4 gap-8'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10'>
           {color_list.map((item, key)=>(
+            key==0? '':
             <div key={key}>
-              <Card elevation={0} variant="outlined">
-                <CardActionArea>
-                  <CardMedia>
-                    {/* <div className='flex h-12 ml-3'>
-                      {item.colors.map((item, key)=>(
-                        <div key={key} className='h-8 w-8 rounded-full -ml-3' style={{backgroundColor: item.main_color}}></div>
-                      ))}
-                    </div> */}
-                    <div className='flex h-20'>
-                      {item.colors.map((item, key)=>(
-                        <div key={key} className='h-20 w-full' style={{backgroundColor: item.main_color}}></div>
-                      ))}
-                    </div>
-                  </CardMedia>
-                  <CardContent>
-                    <Typography variant="h5" component="div">
-                      {item.name}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      颜色数量：{item.colors.length}&nbsp;&nbsp;&nbsp;颜色深度：{item.colors[0].color_list.length}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
+              <div className='bg-zinc-100 dark:bg-zinc-800 hover:bg-blue-500 hover:text-white rounded-lg overflow-hidden p-1 shadow-sm group' onClick={()=>{window.open('/colors?n='+key,'_blank')}}>
+                <div className='rounded-md overflow-hidden shadow-lg'>
+                  <div className='flex h-20'>
+                    {item.colors.map((item, key)=>(
+                      <div key={key} className='h-20 w-full' style={{backgroundColor: item.main_color}}></div>
+                    ))}
+                  </div>
+                </div>
+                <div className='px-2 py-1 flex justify-between items-center'>
+                  <div>
+                    <div className='font-bold text-lg'>{item.name}</div>
+                    <div className='text-sm opacity-50'>颜色数量：{item.colors.length}&nbsp;&nbsp;&nbsp;颜色深度：{item.colors[0].color_list.length}</div>
+                  </div>
+                  <svg className='translate-x-10 group-hover:translate-x-0 transition text-white' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2h12.172Z"/></svg>
+                </div>
+              </div>
             </div>
           ))}
-          
         </div>
       </main>
     </Layout>

@@ -1,5 +1,9 @@
 const color_list = [
   {
+    name: '加载中...',
+    colors: []
+  },
+  {
     name: 'Arco Design',
     colors: [
       {

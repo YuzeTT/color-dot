@@ -76,7 +76,7 @@ const config = {
           //   position: 'left',
           //   label: 'Tutorial',
           // },
-          {to: '/', label: '色彩体系', position: 'left', activeBaseRegex: '^/$'},
+          {to: '/', label: '色彩体系', position: 'left', activeBaseRegex: '^/$|/color'},
           {to: '/doing', label: 'Token匹配器', position: 'left'},
           {to: '/test', label: '色彩对比度', position: 'left'},
 
