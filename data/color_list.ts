@@ -3,6 +3,7 @@ import mui from "./colors/mui"
 import tailwindcss from "./colors/tailwindcss"
 import elementPlus from "./colors/element-plus"
 import antDesign from "./colors/ant-design"
+import layui from "./colors/layui"
 
 const color_list = [
   {
@@ -15,6 +16,7 @@ const color_list = [
   tailwindcss,
   elementPlus,
   antDesign,
+  layui
 ]
 
 export default color_list
