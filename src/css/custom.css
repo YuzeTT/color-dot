@@ -21,7 +21,8 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-footer-background-color-c: #F4F4F5;
   --footer-text-color: #71717a;
-  --border-color: #00000010
+  --border-color: #00000010;
+  --navbar-background-color: #FFFFFF;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -36,7 +37,8 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --ifm-footer-background-color-c: #27272A;
   --footer-text-color: #71717a;
-  --border-color: #FFFFFF10
+  --border-color: #FFFFFF10;
+  --navbar-background-color: #1B1B1D;
 }
 
 .navbar {
@@ -45,6 +47,7 @@
   box-shadow: none;
   background: none;
   border-bottom: 1px solid var(--border-color);
+  background-color: var(--navbar-background-color)
 }
 
 /* @media (min-width: 768px) {

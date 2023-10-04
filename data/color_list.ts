@@ -1,10 +1,12 @@
 const color_list = [
   {
     name: '加载中...',
+    url: '',
     colors: []
   },
   {
     name: 'Arco Design',
+    url: 'https://arco.design/',
     colors: [
       {
         name: "Red 浪漫红",
@@ -80,6 +82,7 @@ const color_list = [
   },
   {
     name: 'Mui',
+    url: 'https://mui.com/',
     colors: [
       {
         name: 'red',
